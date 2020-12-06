@@ -1,6 +1,8 @@
 def checkPolicy(line):
     lineArray = line.split(' ')
-    minMaxOccur = list(map(int,lineArray[0].split('-')))
+    # Bad way. Just cast to int when used instead
+    # minMaxOccur = list(map(int,lineArray[0].split('-')))
+    minMaxOccur = lineArray[0].split('-')
     letter = lineArray[1].split(':')[0]
     password = list(''.join(lineArray[2].split()))
 
@@ -8,7 +10,7 @@ def checkPolicy(line):
     for char in password:
         if char == letter:
             counter = counter +1
-    if counter <= minMaxOccur[1] and counter >= minMaxOccur[0]:
+    if counter <= int(minMaxOccur[1]) and counter >= int(minMaxOccur[0]):
         return True
     return False
 
