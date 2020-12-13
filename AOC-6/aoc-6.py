@@ -19,4 +19,5 @@ if __name__ == "__main__":
                 intersect = groupQ.intersection(line.rstrip())
                 groupQ = intersect
                 group_members = group_members +1
+        # + len(groupQ) is to add the last group count
         print("# Questions: ",global_count + len(groupQ))
