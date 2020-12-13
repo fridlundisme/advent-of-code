@@ -7,7 +7,7 @@ def get_bags(line):
     split_line = line.split()
     bags_split = line.split('bag')
     main_bag = f'{split_line[0]}{split_line[1]}'
-    main_bag_dict = dict
+    main_bag_dict = dict()
     bag_list = []
     for i,s in enumerate(split_line):
         if re.search(number_regex,s):
